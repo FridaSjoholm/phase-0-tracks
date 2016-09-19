@@ -10,3 +10,4 @@ branch is like a making a copy version of a project, and by branching, you can w
 Commit is defined as a save point in git. It helps you keep tracks of any revisions, or any changes you made, whether adding a file, modifying, staginng or whatever, commits show you the history. A good message must be very specific in words, so you know exactly what you did.
 * What is a merge conflict?
 A merge conflict occurs when the branch you are trying to merge into do not match the commits with the branch you are currently in.
+Hi, I'm just adding words for Release part 2 :)
