@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practice Form</title>
+</head>
+<body>
+
+<form name="Borrow A Dog" action="success.html" method="post">
+	<fieldset>
+		<div>
+			<label>Why do you want to borrow a dog?</label>
+			<textarea name="Reason" rows="8" cols="50">Write your reason here</textarea>
+		</div>
+		<div>
+			<label>What city do you live in?</label>
+			<input type="text" name="city">
+		</div>
+		<div>
+			<label>What date would you like to borrow a dog?</label>
+			<input type="date" name="date">
+		</div>
+
+		<div>
+			<label>Choose your preference of dog breed</label>
+			<select name="dogbreed">
+				<option value="Chihuaha">Chihuaha</option>
+				<option value="GreatDane">Great dane</option>
+				<option value="Labrador">Labrador</option>
+			</select>
+		</div>
+
+		<div>
+			<label>Email</label>
+			<input type="email" name="email">
+		</div>
+	</fieldset>
+	<div>
+		<button type ="submit">Submit your application</button>		
+	</div>
+</form>
+
+</body>
+</html>
