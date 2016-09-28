@@ -13,3 +13,11 @@
 	font-size: .8em;
 }
 
+#work-experience:hover {
+	background-color: pink;
+}
+
+.volunteer-gig li {
+	color: pink;
+}
+
