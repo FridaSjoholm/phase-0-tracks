@@ -4,7 +4,7 @@ body{
 }
 
 main{
-  width: 80%;
+  width: 78%;
   display: inline-block;
   vertical-align: text-top;
 }
@@ -13,6 +13,7 @@ main{
   width: 20%;
   display: inline-block;
   vertical-align: text-top;
+  margin-top: 60px;
 }
 
 blockquote {
@@ -31,6 +32,11 @@ cite {
   padding-left: 0px;
 }
 
+h1{
+  font-family: Helvetica, Sans-Serif;
+  font-size: 1.7em;
+}
+
 /* you're welcome to edit the
 image, figure, and figcaption CSS if you'd like, 
 but it's optional! */
@@ -47,3 +53,29 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+@media screen and (max-width: 620px){
+  #external-links{
+    width:100%;
+    margin-top: 0px;
+  } 
+  main{
+    width:100%;
+  }
+
+}
+
+@media screen and (max-width: 880px){
+  h1{
+    font-size:1.3em;
+  }
+}
+
+
+
+/*
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}*/
