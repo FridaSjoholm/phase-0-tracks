@@ -1,0 +1,20 @@
+body{
+	background-color: pink;
+	width:960px;
+}
+#octopus{
+	margin:100px auto; 
+	display:block;
+}
+
+#hat{
+	position: relative;
+	top: -440px;
+	left: 220px;
+}
+
+#glasses{
+	position: relative;
+	top: -395px;
+	left: 420px;
+}
