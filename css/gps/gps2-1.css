@@ -1,0 +1,27 @@
+
+h1, h2, h3, li, a, p{
+  font-family: Helvetica;
+  color: grey;
+}
+header{
+  background-color: yellow;
+  width:100%;
+} 
+.column-1{
+  width:47%;
+  display:inline-block;
+  vertical-align:text-top;
+  background-color: blue;
+  padding:1%;
+}
+.column-2{
+  width:47%;
+  display:inline-block;
+  vertical-align:text-top;
+  background-color: #b4ede3;
+  padding:1%;
+}
+footer{
+  background-color: red;
+  padding: 20px;
+} 
