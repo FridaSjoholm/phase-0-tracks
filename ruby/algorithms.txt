@@ -8,4 +8,23 @@ Elevator robot
 - Move arm forward and press button. 
 - Remove arm and wait patiently for you and human to reach correct floor.
 
- 
+ Personal Real-Life Algorithm
+
+ -After waking up, ask yourself: Do you feel tired?
+ 	-If no: start studying or working instantly
+ 	-If yes: ask yourself: will I be working from home or other place?
+ 		-If other place: Go there and buy coffee.
+ 		-If from home: Look If we have beans:
+ 			-If not, go out and buy a cup of coffe, 
+ 			-If yes:
+ 				-Measure 30 gr. of beans.
+ 				-Grind beans in coffeegrinder.
+ 				-Heat water till it bubbles.
+ 				-Place filter in coffee dripper.
+ 				-Pour a little bit of hot water through filter to make it moist.
+ 				-Place coffee dripper on kettle and put coffee in filter.
+ 				-Pour 50-60gr water over coffee and let rest/bloom for 30 seconds.
+ 				-Reset scale and pour 500g of water slowly over coffee.
+ 				-Drink coffee.
+ 				-Start studying or working with even more enrgy!
+
