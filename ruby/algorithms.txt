@@ -1,0 +1,11 @@
+Elevator robot
+- Scan and read numbers on buttons in elevator 
+- Ask human which floor it wants to go to
+- Go through list of number and see if number human gave was the same as any numbers on the buttons
+	-if not:
+		-ask human again, til the number matches a number on the wall.
+- Move arm til its pointing right at the button with the same number as human gave you
+- Move arm forward and press button. 
+- Remove arm and wait patiently for you and human to reach correct floor.
+
+ 
