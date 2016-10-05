@@ -7,6 +7,13 @@
 # in the alphabeth
 #- make exception for spaces.
 
+#for decrypt:
+#We will use the same method as above to determine length and loop 
+#through the string
+#We will add a alphabeth string, and for each letter look for index in 
+#alphabet string, and add the next letter in alphabet to returning string
+# We will also need exceptions for first letter (a) and spaces
+
 def encrypt(str)
 	length=str.length
 	i=0
@@ -24,4 +31,21 @@ def encrypt(str)
 	return newstring
 end
 
-puts encrypt("xy zb")
+def decrypt(str)
+	length =str.length
+	alphabet = "abcdefghijklmnopqrstuvwxyz"
+	i=0
+	newstr = ""
+	while i<length
+		if str[i]==" "
+			newstr += str[i]
+		elsif str[i]== "a"
+			newstr += "z"
+		else
+			ind = alphabet.index(str[i])
+			newstr += alphabet[ind-1]
+		end
+		i+=1
+	end
+	return newstr
+end
