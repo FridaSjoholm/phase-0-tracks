@@ -40,7 +40,17 @@ while (count < employees.to_i)
 	vampire = "Probably a vampire" if !mathage && (!bread_liking || !insurance)
 	vampire = "Almost certainly a vampire" if !mathage && !bread_liking && !insurance
 	vampire = "Definitely a vampire." if nam == "Drake Cula" ||nam == "Tu Fang"
-
+	
+	allergies = ""
+	until allergies == "done" 
+		puts "Add any allergy, type done when done."
+		allergies = gets.chomp
+		if allergies == "sunshine"
+			vampire = "Definitely a vampire."
+			break
+		end
+	end
+	
 	puts vampire
 	count +=1
 end
