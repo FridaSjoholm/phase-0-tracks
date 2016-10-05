@@ -49,3 +49,25 @@ def decrypt(str)
 	end
 	return newstr
 end
+
+puts "Hello agent, would you like to decrypt or encrypt your password? (D/E)"
+answer = gets.chomp
+puts "What is the password"
+password = gets.chomp
+
+if answer == "D"
+	puts decrypt(password)
+elsif answer == "E"
+	puts encrypt(password)
+else 
+	puts "Input was invalid, you're too bad to use our pro program, you can't be a secret agent!"
+end
+
+#Testdata:
+#puts encrypt("abc")
+#puts encrypt("zed")
+#puts decrypt("bcd")
+#puts decrypt("afe")
+#puts decrypt(encrypt("swordfish")) #This works because it is a nested method, 
+# so first it performs the encrypt method, which gives the decrypt method a string 
+#to work with, which it reverses and brings back the original string.
