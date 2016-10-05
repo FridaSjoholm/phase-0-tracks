@@ -30,3 +30,36 @@ when "Y"
 when "N"
 	insurance = false;
 end
+
+vampire = "Results inconclusive." #only applied if none of the below is applicable.
+vampire = "Probably not a vampire." if  mathage && bread_liking && insurance
+vampire = "Probably a vampire" if !mathage && (!bread_liking || !insurance)
+vampire = "Almost certainly a vampire" if !mathage && !bread_liking && !insurance
+vampire = "Definitely a vampire." if nam == "Drake Cula" ||nam == "Tu Fang"
+
+puts vampire
+
+#vampire = "Results inconclusive." 		--Case method doesn't work due to excess amount of varibles
+#case vampire
+#when  mathage && bread_liking && insurance
+#	vampire = "Probably not a vampire."
+#when !mathage && (!bread_liking || !insurance)
+#	vampire = "Probably a vampire"
+#when !mathage && !bread_liking && !insurance
+#	vampire = "Almost certainly a vampire"
+#when name == "Drake Cula" || "Tu Fang"
+#	 vampire = "Definitely a vampire."
+#end
+#puts vampire
+
+#if  name == "Drake Cula" || "Tu Fang" 	--- If-else doesnt use last condition applicable, but first 
+#	 puts "Definitely a vampire."		---which is not inline with assignment. 
+#elsif (2016 - year_of_birth == age) && bread_liking == "Y" && insurance == "Y"
+#	puts "Probably not a vampire."
+#elsif (2016 - year_of_birth != age) && (bread_liking == "N" || insurance == "N")
+#	puts "Probably a vampire"
+#elsif (2016 - year_of_birth != age) && bread_liking == "N" && insurance == "N"
+#	puts "Almost certainly a vampire"
+#else 
+#	puts "Results inconclusive"
+#end
