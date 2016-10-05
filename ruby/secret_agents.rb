@@ -49,3 +49,11 @@ def decrypt(str)
 	end
 	return newstr
 end
+
+puts encrypt("abc")
+puts encrypt("zed")
+puts decrypt("bcd")
+puts decrypt("afe")
+puts decrypt(encrypt("swordfish")) #This works because it is a nested method, 
+# so first it performs the encrypt method, which gives the decrypt method a string 
+#to work with, which it reverses and brings back the original string.
