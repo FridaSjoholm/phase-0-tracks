@@ -37,7 +37,7 @@ pretty_colors.map! do |color|
 end
 puts pretty_colors
 
-
+#1
 ages = [18, 17, 23, 25, 29, 78, 16, 20]
 puts "people of these ages want to come into the club: "
 p ages
@@ -52,7 +52,7 @@ people.delete_if{|name, age| age < 21}
 puts "These cool people are allowed into the club"
 p people
 
-
+#2
 numbers = [1, 56, 32, 78, 12, 90, 7, 12]
 puts "These numbers wanna be cool"
 p numbers
@@ -66,4 +66,19 @@ p time_of_day
 time_of_day.keep_if{|name, time| time< 19}
 puts "these are good times to eat:"
 p time_of_day
+
+#3
+height = [157, 165, 167, 178, 182, 190]
+p height.take_while{|h| h < 172}
+
+not_models = {Sandra: 157, Louise: 165, Clara: 167, Phoebe: 178, Monica: 182, Mona:190}
+p not_models.take_while{|name, height| height < 172}
+
+#4
+counting = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20]
+p counting
+p counting.drop_while{|num| num < 7}
+
+random_hash = {a:1, b:2, c:3, d:4}
+p random_hash.drop_while{|letter, num| num < 3}
 
