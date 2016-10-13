@@ -14,15 +14,27 @@ new_name = ""
 #go through every letter in the reversed name, and create a string with a new name.
 #if space, keep spce, then see if letter is vowel, if so add next vowel in vowel string 
 #to new_name string, if not check if consonant, if so, put next consonant to new name
+
+#We must also add check if the letter is last vowel or consonant, and if so put the first 
+#vowel/consonant in newname
+
 reversed_name.chars.map{|letter|
 	if letter == " "
 		new_name += " "
 	elsif vowels.index(letter) != nil
-		new_name += vowels[vowels.index(letter)+1]
+		if letter == "u"
+			new_name += vowels[0]
+		else 
+			new_name += vowels[vowels.index(letter)+1]
+		end
 	elsif consonant.index(letter) != nil
-		new_name += consonant[consonant.index(letter)+1]
+		if letter == "z"
+			new_name += consonant[0] 
+		else
+			new_name += consonant[consonant.index(letter)+1]
+		end
 	end
 }
-#return new name to user
+#return new name to user, capitalized(we have to split name up, capitalize each item in array, then join with space between)
 puts "Your supercool alias is:"	
-puts new_name
+puts new_name.split.map(&:capitalize).join(" ")
