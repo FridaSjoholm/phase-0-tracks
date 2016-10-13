@@ -1,11 +1,12 @@
-#To give user possibility to do this over and over we will create a loop that will continue rolling untill
+#To give user possibility to do use the program over and over we will create a loop that will continue rolling untill
 #doesnt want more help, then it will cnhange the conditional value for the loop to false and loop will break.
 
-#ask user for name 
 
+aliases = Hash.new # initializes hash to store aliases
 want_help = true
 while want_help 
-	puts "Whats the name you would like to create a fake name for?"
+#ask user for name 
+puts "Whats the name you would like to create a fake name for?"
 	original_name = gets.chomp
 	if original_name.downcase == "quit"
 		want_help = false
@@ -45,9 +46,13 @@ while want_help
 	}
 	#return new name to user, capitalized(we have to split name up, capitalize each item in array, then join with space between)
 	puts "Your supercool alias is:"	
-	puts new_name.split.map(&:capitalize).join(" ")
+	cool_alias = new_name.split.map(&:capitalize).join(" ")
+	puts cool_alias
+	#to build a structure of all the data we simply provide the data to the hash, with the new key and value.
+	aliases[original_name] = cool_alias
 
 	puts "If you want to creat another alias, type it below, if not, type quit"
 end
 
-puts "thank you for your collaboration"
+puts "Thank you for your collaboration, here are the aliases we made you:"
+aliases.each {|original, new_alias| puts "#{original} has the alias #{new_alias}" }
