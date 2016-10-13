@@ -35,7 +35,7 @@ recipes = {
 }
 
 puts "The ingredients in a apple pie is:"
-puts recipes["Apple pie"][0..-1]
+puts recipes["Apple pie"]
 
 puts "Here! have some salt:"
 puts recipes["Butternut squash soup"][5]
