@@ -38,5 +38,14 @@ y_or_n = gets.chomp
 client[:style_g] = true if y_or_n == "Y"
 client[:style_g] = false if y_or_n == "N"
 
-puts "Thank you for your collaboration"
+puts "Thank you for your collaboration, this is the information we got from you:"
 puts client
+puts "Is there anything you'd like for us to update? if so, print the key, then enter and your new answer. If you are satisfied, type none"
+update = gets.chomp.to_sym
+if update == :none
+	puts "Thanks again!"
+else
+	puts "This value is now #{client[update]}, What do you want it to be"
+	client[update] = gets.chomp
+	puts client
+end
