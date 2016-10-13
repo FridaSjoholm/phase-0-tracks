@@ -7,4 +7,7 @@ original_name = gets.chomp
 first, last = original_name.split(' ')
 reversed_name = last.downcase + " " + first.downcase
 puts reversed_name
-# create one array with vowels and one with consonant
+# create one string (not array, because string still has index and is less messy to write out) with vowels and one with consonant
+vowels = "aeiou"
+consonant = "bcdfghjklmnpqrstvwxyz"
+
