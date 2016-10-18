@@ -1,15 +1,13 @@
-#SPECIES ------------------------
-#Puppy
+#class Puppy
+# 
+#height = 20_inches
+#eyecolor = green
+#friendly= yes
+#fur_length = 10_inches
+#color = Ginger
+# BEHAVIOR (methods)
+#def Snuggle; end
+#def Eat; end
+#def Run; end
 
-#CHARACTERISTICS ----------------
-#Height: 20 inches
-#Eyecolor: green
-#Friendly: yes
-#Fur length: 10 inches
-#Color: Ginger
-
-
-#BEHAVIOR -----------------------
-#Snuggle 
-#Cuddle
-#Huddle
+#end
