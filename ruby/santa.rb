@@ -20,6 +20,28 @@ class Santa
 		puts "That was a good #{cookie}"
 	end
 
+	def celebrate_birthday
+		@age += 1
+	end
+
+	def get_mad_at(reindeer)
+		@reindeer_ranking.delete(reindeer)
+		@reindeer_ranking.push(reindeer)
+	end
+	#setters
+	def gender= (new_gender)
+		@gender = new_gender
+	end
+
+
+	#getters:
+	def age
+		@age
+	end
+	def ethnicity
+		@ethnicity
+	end
+
 end
 
 santas = []
@@ -32,3 +54,12 @@ end
 santas.each do |santa|
 	santa.print_info
 end
+
+santas[0].celebrate_birthday
+santas[0].gender = ("trans")
+puts santas[0].age
+puts santas[0].ethnicity
+santas[0].print_info
+
+santas[1].get_mad_at("Dasher")
+santas[1].print_info
