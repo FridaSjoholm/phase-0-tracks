@@ -1,4 +1,7 @@
 class Santa
+	attr_reader :age, :ethnicity
+	attr_accessor :gender
+
 	def initialize(gender, ethnicity)
 		@gender = gender
 		@ethnicity = ethnicity
@@ -28,20 +31,6 @@ class Santa
 		@reindeer_ranking.delete(reindeer)
 		@reindeer_ranking.push(reindeer)
 	end
-	#setters
-	def gender= (new_gender)
-		@gender = new_gender
-	end
-
-
-	#getters:
-	def age
-		@age
-	end
-	def ethnicity
-		@ethnicity
-	end
-
 end
 
 santas = []
