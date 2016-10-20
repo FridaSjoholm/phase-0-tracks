@@ -29,4 +29,9 @@ class Old_people
 	include Shout
 end
 
-
+Josua = Babies.new
+	puts Josua.yell_angrily("BWAAAAAHHHHHHH")
+	puts Josua.yelling_happily("WOooOOUuuuaaA")
+Burt = Old_people.new
+	puts Burt.yell_angrily("GET OF MY LAWN")
+	puts Burt.yelling_happily("Bingo")
