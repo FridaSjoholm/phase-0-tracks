@@ -1,12 +1,32 @@
+#module Shout
+#   def self.yell_angrily(words)
+#    words + "!!!" + " :("
+#  end
+#  def self.yelling_happily(words)
+#    words + "!!!" + " :D"
+#  end
+#end
+
+#puts Shout.yell_angrily("This sucks")
+#puts Shout.yelling_happily("This rocks")
+#--------------------------------------------
+
 module Shout
-   def self.yell_angrily(words)
+   def yell_angrily(words)
     words + "!!!" + " :("
   end
-
-  def self.yelling_happily(words)
+  def yelling_happily(words)
     words + "!!!" + " :D"
   end
 end
 
-puts Shout.yell_angrily("This sucks")
-puts Shout.yelling_happily("This rocks")
+class Babies 
+	include Shout
+
+end
+
+class Old_people
+	include Shout
+end
+
+
