@@ -10,5 +10,13 @@
 #
 
 class Game
+	attr_reader :array
+	def initialize(word)	
+		@word = word.downcase.chars
+		@guess_count = (word.length)*2
+		array = []
+		(word.length).times{array << "_"} 
+		@array = array
+	end
 	
 end
