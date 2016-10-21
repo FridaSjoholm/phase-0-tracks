@@ -18,5 +18,17 @@ class Game
 		(word.length).times{array << "_"} 
 		@array = array
 	end
-	
+
+	def compare(letter)
+		i = 0
+		while i< @word.length
+			if @word[i] == letter
+				@array[i] = letter
+			end
+			i+=1
+		end
+		@array
+	end
+
+
 end
