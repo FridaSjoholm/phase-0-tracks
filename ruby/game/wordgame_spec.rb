@@ -13,14 +13,11 @@ describe Game do
 
 
 	context "checks if already used letter before, by comparing to array withused letters" do
-		before(:example) do
-			@used_letters = ["a", "c", "g"]
-		end 
 		it "If never used letter, subract from guesscount" do
 			expect(round.attempt("b")).to eq 11
 		end
 		it "if allready used letter, don't subract from guess_count" do
-			expect(round.attempt("c")).to eq 11
+			expect(round.attempt("b")).to eq 11
 		end
 	end
 
