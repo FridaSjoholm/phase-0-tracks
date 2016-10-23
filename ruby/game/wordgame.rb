@@ -11,12 +11,15 @@
 
 class Game
 	attr_reader :array
+	attr_accessor :guess_count, :used_letters
 	def initialize(word)	
 		@word = word.downcase.chars
 		@guess_count = (word.length)*2
 		array = []
 		(word.length).times{array << "_"} 
 		@array = array
+		@over = false
+		@used_letters = []
 	end
 
 	def compare(letter)
@@ -31,4 +34,14 @@ class Game
 	end
 
 
+	def attempt(letter)
+		if @used_letters.include?(letter)
+			puts "That's the same letter again, that won't help"
+		else
+			@used_letters << letter
+			@guess_count -= 1
+			puts "you have #{@guess_count} attempts left"
+		end
+	@guess_count
+	end
 end
