@@ -62,3 +62,11 @@ puts new_qty(list, "pizza", 7)
   #start by printing to console: These are the items we want to buy: 
   #Iterates trough hash and for each key prints a sentence with quantities  like: "Apples = 5"
 # output: nada
+
+def pretty_in_print(list)
+    puts "---------------------------------------"
+    puts "These are the items we are gonna buy"
+    list.each {|item, qty| puts "#{qty} pieces of #{item}" }
+end
+
+pretty_in_print(list)
