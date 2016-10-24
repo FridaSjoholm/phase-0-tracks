@@ -56,3 +56,19 @@ class Game
 		@over
 	end
 end
+
+#user interface
+#puts "Welcome to my game!"
+#puts "Please start by giving a secret word"
+#secret = gets.chomp
+#round = Game.new(secret)
+#puts round.array.join(" ")
+#while !round.over
+#	puts "Now guess a letter"
+#	letter = gets.chomp.downcase
+#	round.compare(letter)
+#	round.attempt(letter)
+#	round.done
+#	puts round.array.join(" ")
+#	puts "----------------------------"
+#end	
