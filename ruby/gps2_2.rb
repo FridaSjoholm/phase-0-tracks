@@ -49,6 +49,13 @@ puts remove_item(list, "apple")
 # steps: Search for the key with value name in hash list, and set new value of the key to wished quantity. 
 # output: list with updated quantities
 
+def new_qty(list, item, qty)
+  list[item] = qty
+  return list
+end
+
+puts new_qty(list, "pizza", 7)
+
 # Method to print a list and make it look pretty
 # input: List with items
 # steps:
