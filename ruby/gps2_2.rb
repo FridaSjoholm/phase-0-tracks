@@ -64,3 +64,24 @@ remove_item(list, "lemonade")
 new_qty(list, "ice cream", 1)
 
 pretty_in_print(list)
+
+#personal reflection
+#What did you learn about pseudocode from working on this challenge?
+    #With this layout of pseudocode it's easy to get an overiview and you don't have to think 
+    #as hard about irrelevant things, like form nice long sentences about how to build the program
+    #It ade ma appreciate pseudocoding way more. 
+#What are the tradeoffs of using arrays and hashes for this challenge?
+    #arrays can sometimes be more comfortable to handle, but in this assignment where the item and 
+    #quantity comes in a pair hashes are so much more convenient, it's so easy to pair them and select 
+    #the value of a certain item. 
+#What does a method return?
+    #A method returns the thing after the word return, if not, it will return last thing stated. If that 
+    #makes sense (puts "something" is a typical thing that doesn't make sense to return). If one of the above, 
+    #method will return nil.  
+#What kind of things can you pass into methods as arguments?
+    #almost everything! arrays, hashes, ints, strings, even codeblocks! 
+#How can you pass information between methods?
+    #either by assigning tge return value to a variable that you then pass into another method, or by declaring
+    #global variables. 
+#What concepts were solidified in this challenge, and what concepts are still confusing?
+    #pseudocode was solidifies, and hashes, I definitely feel more comfortable with them now.
