@@ -10,8 +10,8 @@
 #
 
 class Game
-	attr_reader :array
-	attr_accessor :guess_count, :used_letters
+	attr_accessor :guess_count, :used_letters, :array, :over
+
 	def initialize(word)	
 		@word = word.downcase.chars
 		@guess_count = (word.length)*2
@@ -43,5 +43,16 @@ class Game
 			puts "you have #{@guess_count} attempts left"
 		end
 	@guess_count
+	end
+
+	def done()
+		if @guess_count == 0
+			puts "Thats not enough to continue :("
+			@over = true
+		elsif @array == @word 
+			puts "Woohooo! you won!"
+			@over = true	
+		end
+		@over
 	end
 end
