@@ -18,7 +18,7 @@ def create_list(str)
 end
 
 list = create_list("carrot apple cereal pizza")
-p list
+puts list
 
 # Method to add an item to a list
 # input: item name and optional quantity, list
@@ -27,16 +27,22 @@ p list
 # output: #the hash, which now has the extra item
 
 def add_item(list, item, qty = 1)
-  
-  return something
+  list[item] = qty
+  return list
 end
+
+puts add_item(list,"bacon", 3)
 
 
 # Method to remove an item from the list
 # input: Name of item user wants removed, list with items(hash)
 # steps: Searh for and delete key with value in the list
 # output: list with iems
-
+def remove_item(list, item)
+    list.delete(item)
+    return list
+end
+puts remove_item(list, "apple")   
 # Method to update the quantity of an item
 # input:Name of item user wants updated, new quantity, list with items(hash)
 # steps: Search for the key with value name in hash list, and set new value of the key to wished quantity. 
