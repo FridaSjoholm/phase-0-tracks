@@ -33,7 +33,6 @@ end
 
 puts add_item(list,"bacon", 3)
 
-
 # Method to remove an item from the list
 # input: Name of item user wants removed, list with items(hash)
 # steps: Searh for and delete key with value in the list
@@ -42,7 +41,9 @@ def remove_item(list, item)
     list.delete(item)
     return list
 end
-puts remove_item(list, "apple")   
+
+puts remove_item(list, "apple")  
+
 # Method to update the quantity of an item
 # input:Name of item user wants updated, new quantity, list with items(hash)
 # steps: Search for the key with value name in hash list, and set new value of the key to wished quantity. 
