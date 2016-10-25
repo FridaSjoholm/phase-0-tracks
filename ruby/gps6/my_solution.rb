@@ -80,3 +80,17 @@ end
 
 #=======================================================================
 # Reflection Section
+
+#What are the differences between the two different hash syntaxes shown in the state_data file?
+  # The arrow ( => ) can be used when keys are variables are in any form, where as the syntax used here:
+  #(population_density: 94.65) is made for when the key is a symbol
+#What does require_relative do? How is it different from require?
+  #Require and require relative lets the file use information from another file, by require relative
+  # we dont have to write a path to the file but expect it to be in the same folder. If we want to 
+  #relate to a file that is in another folder we can use relate and a path to that file.
+#What are some ways to iterate through a hash?
+  #Use each, hash.each for either key, value or both
+#When refactoring virus_effects, what stood out to you about the variables, if anything?
+  #The fact that we don't need to pass in and out instance variables within a class.
+#What concept did you most solidify in this challenge?
+  #The concept of scope within and outside classes and methods. 
