@@ -16,3 +16,5 @@ function comparer(stringArray){
 }
 
 console.log(comparer(["long phrase","longest phrase","longer phrase"]))
+console.log(comparer(["Astrid Lindgren","Jane Austen","Sylvia Plath"]))
+console.log(comparer(["Hello","Hola","Hejsan"]))
