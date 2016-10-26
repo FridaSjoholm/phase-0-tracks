@@ -9,5 +9,9 @@ function reverseString(originalWord){
 	}
 	return reversedString
 }
-console.log(reverseString("whatever"))
-console.log(reverseString("not a palindrome"))
+var goodWord = "whatever"
+var weirdWord = (reverseString(goodWord))
+
+if (weirdWord.length > 5){
+	console.log (goodWord + " reversed is " + weirdWord + " and it has more than 5 letters.")	
+}
