@@ -11,6 +11,12 @@
 // To be able to compare all keys to each other (if they are in differnt order in different objects),
 // we need two forloops nested with different indexes. 
 
+//arrBuilder
+//Function takes number of words wanted in array as input. First theing we do is to build a loop that 
+// will continue looping until we've made as many words as wanted, and placed them in an array. For each 
+//word we will then make a random number beween 1-10 that will be length of word, then another loop creating
+//as many lettes as wanted and placing them in the word variable. We choose letters by getting a random number between
+//0 and 25, and using that random number as index in a string with letters. Finally we return the array with words.
 
 
 function comparer(stringArray){
@@ -35,11 +41,26 @@ function matchChecker(obj1, obj2){
 					return true
 				}
 			}
-
 		}
 	}
 	return false;
 }
+
+
+function arrBuilder(qty){
+	arr= []
+	letters= "abcdefghijklmnopqrstuvwxyz"
+	for (var i = 0; i < qty; i++){
+		var word = "";
+		var wordLength = Math.floor((Math.random() * 10) + 1);
+		for (var j = 0; j < wordLength; j++){
+			word += letters[Math.floor(Math.random() * 26)];
+		}
+		arr.push(word);
+	}
+	return arr;
+}
+
 
 console.log(comparer(["long phrase","longest phrase","longer phrase"]))
 console.log(comparer(["Astrid Lindgren","Jane Austen","Sylvia Plath"]))
@@ -49,3 +70,8 @@ console.log(comparer(["Hello","Hola","Hejsan"]))
 console.log("Matching? " + matchChecker({name: "Steven", age: 53},{name: "Tamir", age: 54}))
 console.log("Matching? " + matchChecker({name: "Klas", age: 54},{name: "Tamir", age: 54}))
 console.log("Matching? " + matchChecker({name: "Steven", age: 54},{age: 54, name: "Tamir"}))
+
+
+console.log(arrBuilder(4));
+console.log(arrBuilder(7));
+console.log(arrBuilder(2));
