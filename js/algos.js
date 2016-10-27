@@ -20,13 +20,13 @@
 
 
 function comparer(stringArray){
-	var longest = ""
+	var longest = "";
 	for (var i = 0; i < stringArray.length; i++){
 		if (stringArray[i].length> longest.length){
-			longest = stringArray[i]
+			longest = stringArray[i];
 		}
 	}
-	return longest
+	return longest;
 }
 
 function matchChecker(obj1, obj2){
@@ -38,7 +38,7 @@ function matchChecker(obj1, obj2){
 			if (keys1[i] == keys2[j]){
 				if (obj1[keys1[i]] == obj2[keys2[j]]){
 					//console.log(keys1[i] + " = " + obj1[keys1[i]] + " is the same as " + keys2[j]  +" = " + obj2[keys2[j]])
-					return true
+					return true;
 				}
 			}
 		}
@@ -48,8 +48,8 @@ function matchChecker(obj1, obj2){
 
 
 function arrBuilder(qty){
-	arr= []
-	letters= "abcdefghijklmnopqrstuvwxyz"
+	arr= [];
+	letters= "abcdefghijklmnopqrstuvwxyz";
 	for (var i = 0; i < qty; i++){
 		var word = "";
 		var wordLength = Math.floor((Math.random() * 10) + 1);
@@ -62,16 +62,19 @@ function arrBuilder(qty){
 }
 
 
-console.log(comparer(["long phrase","longest phrase","longer phrase"]))
-console.log(comparer(["Astrid Lindgren","Jane Austen","Sylvia Plath"]))
-console.log(comparer(["Hello","Hola","Hejsan"]))
+console.log(comparer(["long phrase","longest phrase","longer phrase"]));
+console.log(comparer(["Astrid Lindgren","Jane Austen","Sylvia Plath"]));
+console.log(comparer(["Hello","Hola","Hejsan"]));
 
 
-console.log("Matching? " + matchChecker({name: "Steven", age: 53},{name: "Tamir", age: 54}))
-console.log("Matching? " + matchChecker({name: "Klas", age: 54},{name: "Tamir", age: 54}))
-console.log("Matching? " + matchChecker({name: "Steven", age: 54},{age: 54, name: "Tamir"}))
+console.log("Matching? " + matchChecker({name: "Steven", age: 53},{name: "Tamir", age: 54}));
+console.log("Matching? " + matchChecker({name: "Klas", age: 54},{name: "Tamir", age: 54}));
+console.log("Matching? " + matchChecker({name: "Steven", age: 54},{age: 54, name: "Tamir"}));
 
+for (i = 0; i < 10; i++){
+	var arrToPrint = arrBuilder(Math.floor((Math.random() * 10) + 1));
+	console.log("---------------------------------------------------------" + (i+1))
+	console.log("We very ramdomly created these words: " + arrToPrint);
+	console.log("And this is the longest word in the array: " + comparer(arrToPrint))
+}
 
-console.log(arrBuilder(4));
-console.log(arrBuilder(7));
-console.log(arrBuilder(2));
