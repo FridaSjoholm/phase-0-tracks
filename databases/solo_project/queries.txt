@@ -1,0 +1,83 @@
+Display the information in one table (either table is fine).
+sqlite> SELECT * FROM characters;
+1|Ross|true|236|1
+2|Lorelai|false|154|3
+3|Robin|true|208|2
+4|Rachel|false|236|1
+5|Rory|false|154|3
+6|Phoebe|true|236|1
+7|Ted|true|208|2
+8|Jess|false|37|3
+
+Update an item that meets some condition (you can choose a condition that makes sense).
+sqlite> UPDATE characters SET episodes=234 WHERE name = "Phoebe";
+
+Display the information in both tables using one query.
+sqlite> SELECT * FROM characters, series WHERE characters.series_id =series.id;
+1|Ross|true|236|1|1|friends
+2|Lorelai|false|154|3|3|gilmore girls
+3|Robin|true|208|2|2|how I met your mother
+4|Rachel|false|236|1|1|friends
+5|Rory|false|154|3|3|gilmore girls
+6|Phoebe|true|234|1|1|friends
+7|Ted|true|208|2|2|how I met your mother
+8|Jess|false|37|3|3|gilmore girls
+
+Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+sqlite> SELECT characters.name, series.name FROM characters LEFT JOIN series ON characters.series_id = series.id;
+Ross|friends
+Lorelai|gilmore girls
+Robin|how I met your mother
+Rachel|friends
+Rory|gilmore girls
+Phoebe|friends
+Ted|how I met your mother
+Jess|gilmore girls
+
+Delete an item that meets some condition (you can choose a condition that makes sense).
+sqlite> DELETE FROM characters WHERE episodes<100;
+sqlite> SELECT * FROM characters;
+1|Ross|true|236|1
+2|Lorelai|false|154|3
+3|Robin|true|208|2
+4|Rachel|false|236|1
+5|Rory|false|154|3
+6|Phoebe|true|234|1
+7|Ted|true|208|2
+(deleted Jess from Gilmore Girls)
+
+A few different joins:
+
+sqlite> SELECT characters.episodes, series.name FROM characters INNER JOIN series ON characters.series_id = series.id;
+236|friends
+154|gilmore girls
+208|how I met your mother
+236|friends
+154|gilmore girls
+234|friends
+208|how I met your mother
+sqlite>
+
+sqlite> SELECT characters.name, series.name FROM characters INNER JOIN series ON characters.series_id = series.id WHERE characters.doppelganger = "true";
+Ross|friends
+Robin|how I met your mother
+Phoebe|friends
+Ted|how I met your mother
+sqlite>
+
+sqlite> SELECT characters.name, series.name FROM characters RIGHT JOIN series ON characters.series_id = series.id;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+(seems to be avalable for sql but not sqlite3)
+
+sqlite> SELECT characters.name, characters.episodes, series.name FROM characters JOIN series ON characters.series_id = series.id;
+Ross|236|friends
+Lorelai|154|gilmore girls
+Robin|208|how I met your mother
+Rachel|236|friends
+Rory|154|gilmore girls
+Phoebe|234|friends
+Ted|208|how I met your mother
+
+
+
+
