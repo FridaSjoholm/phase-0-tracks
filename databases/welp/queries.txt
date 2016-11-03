@@ -1,0 +1,32 @@
+You've joined two tables before. How do you join three?
+
+sqlite> SELECT * FROM businesses, users, reviews WHERE reviews.business_id = businesses.id AND reviews.user_id = users.id;
+1|Grundy Hollow Wedding Chapel|1|Bradford|Pitt|1|5|Great place to get married! We will last forever!|1|1
+1|Grundy Hollow Wedding Chapel|3|Angela|Jolie|2|2|ok place to get married! We are happy for now|1|3
+2|Amir's Towing|4|Steven|Wonder|3|2|I never crash driving my car, so happy they were there for me in that unforeseeable moment|2|4
+3|The Beagle Nightclub|6|Merryl|Streepman|4|4|Their 60's sundays are the best|3|6
+4|Lotus Yoga|7|Denzel|George|5|5|Nothing relaxes me more than this place followed by chamomille tea|4|7
+
+
+There are some repetitive columns if we choose to view all fields. Choose instead to just view the user's names, the business name, the star rating, and the comment.
+
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM reviews JOIN businesses ON reviews.business_id = businesses.id JOIN users ON reviews.user_id = users.id;
+Bradford|Pitt|Grundy Hollow Wedding Chapel|5|Great place to get married! We will last forever!
+Angela|Jolie|Grundy Hollow Wedding Chapel|2|ok place to get married! We are happy for now
+Steven|Wonder|Amir's Towing|2|I never crash driving my car, so happy they were there for me in that unforeseeable moment
+Merryl|Streepman|The Beagle Nightclub|4|Their 60's sundays are the best
+Denzel|George|Lotus Yoga|5|Nothing relaxes me more than this place followed by chamomille tea
+sqlite>
+
+
+How do you view the data of all three tables for just one particular business? 
+(cleaner data selected as above)
+
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM reviews JOIN businesses ON reviews.business_id = businesses.id JOIN users ON reviews.user_id = users.id WHERE businesses.name = "Grundy Hollow Wedding Chapel";
+Bradford|Pitt|Grundy Hollow Wedding Chapel|5|Great place to get married! We will last forever!
+Angela|Jolie|Grundy Hollow Wedding Chapel|2|ok place to get married! We are happy for now
+
+(all data on one selected business)
+sqlite> SELECT * FROM reviews JOIN businesses ON reviews.business_id = businesses.id JOIN users ON reviews.user_id = users.id WHERE businesses.name = "Grundy Hollow Wedding Chapel";
+1|5|Great place to get married! We will last forever!|1|1|1|Grundy Hollow Wedding Chapel|1|Bradford|Pitt
+2|2|ok place to get married! We are happy for now|1|3|1|Grundy Hollow Wedding Chapel|3|Angela|Jolie
