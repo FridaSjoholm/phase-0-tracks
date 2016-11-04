@@ -46,6 +46,22 @@ def create_idea(db, name, thing, price)
 	db.execute("INSERT INTO ideas(name, thing, price) VALUES (?,?, ?)", [name, thing, price])
 end
 
+# Welcomes user, displays Shoplist with only gifts priced under budget, gives option to user:
+
+#- look at list of people
+#- add new person 
+#- delete person
+
+#- Look at list of ideas
+#- Add ideas
+#- delete ideas 
+
+#- display shoplist with only ideas under budget
+#- update if bought or not
+
+# -delete database to make room for new holiday.
+#- exit program 
+puts 
 create_person(db, "Louise", 20)
 create_person(db, "Elina", 20)
 
