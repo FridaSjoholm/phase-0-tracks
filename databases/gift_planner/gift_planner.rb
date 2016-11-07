@@ -1,3 +1,9 @@
+#WELCOME! This is a program that helps planning your holiday shopping, the same way I normally 
+#do my planning. By adding people and budget to one list, ideas of gift and prices in another 
+#list and finally one shoppinglist paring people with ideas, looking at price and budget. 
+#I can the mark them as bought and keep charge of my christmas shopping. 
+#The program uses ruby and databases(SQLite3).
+
 require 'sqlite3'
 require 'faker'
 
