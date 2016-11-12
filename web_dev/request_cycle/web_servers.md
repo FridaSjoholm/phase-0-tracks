@@ -1,0 +1,5 @@
+What are some of the key design philosophies of the Linux operating system?
+	Linux is a open source software, which means it's not one corporation designing and selling the software but everyone can edit and use it. It can be used on most platforms and conveniently for us even on virtual platforms
+In your own words, what is a VPS (virtual private server)? What, according to your research, are the advantages of using a VPS?
+	A VPS is like a virtual computer, it has a OS and is set up like a computer but the physical part is somewhere else. A internet hosting service can sell a VPS that they store on their on servers. 
+	This makes the VPS accessible from anywhere in the word, it is a great place to develop something without crashing your own computer. VPS are also great because they are cheap and easy to scale, you can change sixe of your server anytime you want to. 
