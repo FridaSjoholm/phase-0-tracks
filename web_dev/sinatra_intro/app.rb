@@ -1,5 +1,6 @@
 # require gems
 require 'sinatra'
+require "sinatra/reloader"
 require 'sqlite3'
 
 db = SQLite3::Database.new("students.db")
@@ -19,8 +20,26 @@ get '/about/:person' do
   "#{person} is a programmer, and #{person} is learning Sinatra."
 end
 
+get '/contact' do
+  "Joe Smith, 123 4th street, 94110 San Francisco, CA US "
+end
+
 get '/:person_1/loves/:person_2' do
   "#{params[:person_1]} loves #{params[:person_2]}"
+end
+
+get '/great_job' do
+  person = params[:person]
+  if person
+    "Good job, #{person}!"
+  else
+    "Good job!"
+  end
+end
+
+get '/add/:num1/:num2' do
+  num3 = (params[:num1]).to_i + (params[:num2]).to_i 
+  "Result: #{num3}"
 end
 
 # write a GET route that retrieves
@@ -33,6 +52,16 @@ get '/students' do
     response << "Name: #{student['name']}<br>"
     response << "Age: #{student['age']}<br>"
     response << "Campus: #{student['campus']}<br><br>"
+  end
+  response
+end
+
+get '/students_at_campus/:campus' do
+  students = db.execute("SELECT * FROM students WHERE campus=?", [params[:campus]])
+  response = ""
+  response << "These people are going to the campus in #{params[:campus]} <br>"
+  students.each do |student|
+     response << "#{student['name']} <br>"
   end
   response
 end
