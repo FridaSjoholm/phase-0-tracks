@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Playing wth jQuery</title>
+</head>
+
+<!--Some basic css-->
+<style type="text/css">
+	body{
+		max-width: 980px;
+		margin: auto;
+	}
+	p, h1{
+		font-family: Helvetica;
+		color: Black;
+	}
+	p {
+		display:inline-block;
+		margin: 20px;
+		size:1.7em;
+	}
+	img{
+		width:80%;
+		display: inline-block;
+		margin: auto;
+		border:70px solid black;
+	}	
+</style>
+
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+	$("document").ready(function() {
+            $("#Blush").on("mousemove", Blush);
+            $("#Fog").on("mousemove", Fog);
+            $("#Charcoal").on("mousemove", Charcoal);
+            $("#Pistachio").on("mousemove", Pistachio);
+            $("#Teal").on("mousemove", Teal);
+        });
+        
+        function Blush(evt) {
+            $("#Photo").css("border", "70px solid #edd7db");
+        }
+
+        function Fog(evt) {
+            $("#Photo").css("border", "70px solid #d5dbe5");
+        }
+
+        function Charcoal(evt) {
+            $("#Photo").css("border", "70px solid #4b4b51");
+        }
+
+        function Pistachio(evt) {
+            $("#Photo").css("border", "70px solid #bed8bc");
+        }
+
+        function Teal(evt) {
+            $("#Photo").css("border", "70px solid #264a4f");
+        }
+
+</script>
+<body>
+	<h1>Welcome! <br>
+	Here you can try some different passe-partouts before deciding which one to get! Hover over the color you wanna see and it will stay that color until you try something else. </h1>
+
+	<img id ="Photo" src="image.jpg">
+
+	<p id= "Blush"> Blush </p>
+	<p id= "Fog"> Fog </p>
+	<p id= "Charcoal"> Charcoal </p>
+	<p id= "Pistachio"> Pistachio </p>
+	<p id= "Teal"> Teal </p>
+</body>
+</html>
