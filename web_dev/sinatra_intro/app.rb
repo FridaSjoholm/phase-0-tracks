@@ -1,5 +1,6 @@
 # require gems
 require 'sinatra'
+require "sinatra/reloader"
 require 'sqlite3'
 
 db = SQLite3::Database.new("students.db")
@@ -17,6 +18,10 @@ end
 get '/about/:person' do
   person = params[:person]
   "#{person} is a programmer, and #{person} is learning Sinatra."
+end
+
+get '/contact' do
+  "Joe Smith, 123 4th street, 94110 San Francisco, CA US "
 end
 
 get '/:person_1/loves/:person_2' do
