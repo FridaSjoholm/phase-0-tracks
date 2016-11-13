@@ -28,6 +28,20 @@ get '/:person_1/loves/:person_2' do
   "#{params[:person_1]} loves #{params[:person_2]}"
 end
 
+get '/great_job' do
+  person = params[:person]
+  if person
+    "Good job, #{person}!"
+  else
+    "Good job!"
+  end
+end
+
+get '/add/:num1/:num2' do
+  num3 = (params[:num1]).to_i + (params[:num2]).to_i 
+  "Result: #{num3}"
+end
+
 # write a GET route that retrieves
 # all student data
 get '/students' do
@@ -38,6 +52,16 @@ get '/students' do
     response << "Name: #{student['name']}<br>"
     response << "Age: #{student['age']}<br>"
     response << "Campus: #{student['campus']}<br><br>"
+  end
+  response
+end
+
+get '/students_at_campus/:campus' do
+  students = db.execute("SELECT * FROM students WHERE campus=?", [params[:campus]])
+  response = ""
+  response << "These people are going to the campus in #{params[:campus]} <br>"
+  students.each do |student|
+     response << "#{student['name']} <br>"
   end
   response
 end
